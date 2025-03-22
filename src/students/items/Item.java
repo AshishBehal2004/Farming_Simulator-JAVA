@@ -22,4 +22,28 @@ public class Item {
 		this.age= age;
 	}
 	
+	public void tick() 
+	{
+		this.age += 1;
+	}
+	
+	public boolean died()
+	{
+		if (this.age >= this.death_age)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public int getValue()
+	{
+		if (this.age >= this.maturation_age)
+		{
+			return this.monetary_value;			
+		}	
+		return this.monetary_value;
+		
+	}
+	
 }
