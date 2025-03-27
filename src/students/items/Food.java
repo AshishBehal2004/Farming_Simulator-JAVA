@@ -1,6 +1,6 @@
 package students.items;
 
-public class Food {
+public class Food extends Item {
 
 
 }
