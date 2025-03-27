@@ -1,10 +1,10 @@
 package students.items;
 
-public class Item {
+public abstract class Item {
 	private int age = 0;
-	private int maturation_age = 0;
-	private int death_age = 0;
-	private int monetary_value = 0;
+	private int maturation_age;
+	private int death_age;
+	private int monetary_value;
 	
 	//Constructor
 	public Item() 
@@ -42,8 +42,10 @@ public class Item {
 		{
 			return this.monetary_value;			
 		}	
-		return this.monetary_value;
-		
+		return this.monetary_value;	
 	}
+	
+	//This is toString going to be used by the child classes.
+	public abstract String toString();
 	
 }
