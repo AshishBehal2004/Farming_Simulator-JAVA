@@ -45,6 +45,20 @@ public abstract class Item {
 		return this.monetary_value;	
 	}
 	
+	@Override
+	public boolean equals(Object otherObj)
+	{
+		if (otherObj instanceof Item)
+		{
+			Item item = (Item) otherObj;
+			return this.age == item.age &&
+				   this.maturation_age == item.maturation_age &&
+				   this.death_age == item.death_age &&
+				   this.monetary_value == item.monetary_value;
+		}
+		return false;
+	}
+	
 	//This is toString going to be used by the child classes.
 	public abstract String toString();
 	

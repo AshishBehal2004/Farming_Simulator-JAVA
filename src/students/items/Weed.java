@@ -1,6 +1,6 @@
 package students.items;
 
-public class Weed
+public class Weed extends Item
 {
 
 }
