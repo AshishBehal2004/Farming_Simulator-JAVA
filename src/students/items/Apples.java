@@ -7,7 +7,7 @@ public class Apples extends Food {
 	public Apples()
 	{
 		super(3,5,3);
-		generationCount++;
+		generationCount+=1;
 	}
 	
 	public static int getGenerationCount()
