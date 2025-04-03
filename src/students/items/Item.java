@@ -7,9 +7,9 @@ public abstract class Item {
 	private int monetary_value;
 	
 	//Constructor
-	public Item() 
+	public Item(int maturation_age, int death_age, int monetary_value) 
 	{
-		this.age = age;
+		this.age = 0;
 		this.maturation_age = maturation_age;
 		this.death_age = death_age;
 		this.monetary_value = monetary_value;
@@ -36,6 +36,11 @@ public abstract class Item {
 		return false;
 	}
 	
+	public int getAge()
+	{
+		return this.age;
+	}
+	
 	public int getValue()
 	{
 		if (this.age >= this.maturation_age)
@@ -44,11 +49,11 @@ public abstract class Item {
 		}	
 		return this.monetary_value;	
 	}
-	//.equals method whic will first override the default .equals method. 
+	//.equals method which will first override the default .equals method. 
 	//Then in the method it takes one parameter otherObj which is an 
 	//Object(allows any types of object to passed in order to compare.).
 	//The if block uses instanceof to check if the otherObj is instance of the Item 
-	//class(or its subclasses(for eg Food, Weed etc). if true then convert otherObj into Item
+	//class(or its subclasses(for eg: Food, Weed etc). if true then convert otherObj into Item
 	//and check if Item's age, maturation_age, death_age,, monetary_value matches the 
 	//otherObj's(which is also now item after the conversion) age, maturation_age, death_age,
 	//monetary_value. else exit the if block and return false(As it happens when either when is not matched).
