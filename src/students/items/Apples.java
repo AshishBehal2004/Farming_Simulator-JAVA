@@ -2,16 +2,15 @@ package students.items;
 
 public class Apples extends Food {
 	
-	private int generationCount = 0;
+	private static int generationCount = 0;
 	
 	public Apples()
 	{
 		super(3,5,3);
-		this.generationCount = generationCount;
-		
+		generationCount++;
 	}
 	
-	public int getGenerationCount()
+	public static int getGenerationCount()
 	{
 		return generationCount;
 	}

@@ -29,11 +29,7 @@ public abstract class Item {
 	
 	public boolean died()
 	{
-		if (this.age >= this.death_age)
-		{
-			return true;
-		}
-		return false;
+		return this.age > this.death_age;
 	}
 	
 	public int getAge()
@@ -47,7 +43,7 @@ public abstract class Item {
 		{
 			return this.monetary_value;			
 		}	
-		return this.monetary_value;	
+		return 0;	
 	}
 	//.equals method which will first override the default .equals method. 
 	//Then in the method it takes one parameter otherObj which is an 
