@@ -29,11 +29,14 @@ public class Marker {
 
 		System.out.println(new Weed()); // should print "#"
 		System.out.println(new UntilledSoil()); // should print "/"
-
-		Grain grain1 = new Grain();
-		Grain grain2 = new Grain();
 		
-		System.out.println(grain1.getGenerationCount());
+		//just to check if the counter is working or not
+		//will remove it
+//		Grain grain1 = new Grain();
+//		Grain grain2 = new Grain();
+		//System.out.println(grain1.getGenerationCount());
+		
+		
 		// Section TWO
 		// uncomment this section once you get to it
 		
