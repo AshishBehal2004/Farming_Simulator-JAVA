@@ -4,6 +4,7 @@ import students.Farm;
 import students.Field;
 import students.items.*;
 
+import students.Field;
 public class Marker {
 
 	public static void main(String[] args) {
@@ -12,30 +13,33 @@ public class Marker {
 		
 		//you should NOT be able to make an Item - following line shouldn't compile if uncommented
 		//new Item(0, 0, 0);
-
-		System.out.println(Apples.getGenerationCount()); // should print 0
-		Apples a = new Apples();
-		System.out.println(Apples.getGenerationCount()); // should print 1
-		System.out.println(a); // should print "a"
-		System.out.println(a.getValue()); // should print 0
-		a.setAge(5);
-		System.out.println(a.getValue()); // should print 3
-		System.out.println(a); // should print "A"
-		System.out.println(a.died()); // should print false
-		a.tick();
-		System.out.println(a.died()); // should print true
-		Food testFood = a; //this should be possible
-		Item testItem = testFood; //this should be possible
-
-		System.out.println(new Weed()); // should print "#"
-		System.out.println(new UntilledSoil()); // should print "/"
+//
+//		System.out.println(Apples.getGenerationCount()); // should print 0
+//		Apples a = new Apples();
+//		System.out.println(Apples.getGenerationCount()); // should print 1
+//		System.out.println(a); // should print "a"
+//		System.out.println(a.getValue()); // should print 0
+//		a.setAge(5);
+//		System.out.println(a.getValue()); // should print 3
+//		System.out.println(a); // should print "A"
+//		System.out.println(a.died()); // should print false
+//		a.tick();
+//		System.out.println(a.died()); // should print true
+//		Food testFood = a; //this should be possible
+//		Item testItem = testFood; //this should be possible
+//		
+		Field testfield = new Field(6,10);
+		Soil testsoil = new Soil();
+		System.out.println(testfield.toString());
+		System.out.println(testsoil.toString());
+//		System.out.println(new Weed()); // should print "#"
+//		System.out.println(new UntilledSoil()); // should print "/"
 		
 		//just to check if the counter is working or not
 		//will remove it
 //		Grain grain1 = new Grain();
 //		Grain grain2 = new Grain();
 		//System.out.println(grain1.getGenerationCount());
-		
 		
 		// Section TWO
 		// uncomment this section once you get to it

@@ -49,7 +49,30 @@ public class Field {
 				field[i][j] = new UntilledSoil();
 			}
 		}
-	
+	}
 	}
 	
+	@Override
+	public String toString()
+	{	
+		String fieldsize = " ";
+		
+		for (int  i = 1; i<width;i++)
+		{
+			fieldsize += i + " ";
+		}
+		fieldsize += "\n";
+		
+		
+		for (int j=1;j< height;j++)
+		{
+			fieldsize += j + " ";
+			for (int z=0;z<width;z++)
+			{
+				fieldsize += field[j][z].toString();
+			}
+			fieldsize += "\n";
+		}
+		return fieldsize;
+	}
 }
