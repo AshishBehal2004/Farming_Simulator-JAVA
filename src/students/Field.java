@@ -29,6 +29,7 @@ public class Field {
 		}
 	}
 	
+	
 	public void tick()
 	{
 		for (int i =0; i<height; i++)
@@ -52,10 +53,38 @@ public class Field {
 	}
 	}
 	
+	
 	public void till(int row, int column)
 	{
 		field[row][column] = new Soil();
 	}
+	
+	
+	public void plant(int row,int column,Item item)
+	{
+		field[row][column] = item;
+	}
+	
+	
+	public Item get(int row,int column)
+	{
+		Item originalcopy = field[row][column];
+		if (originalcopy instanceof Soil)
+		{
+			Soil copySoil = new Soil();
+			copySoil.setAge(originalcopy.getAge());
+			return copySoil;
+		}
+		else if (originalcopy instanceof Weed)
+		{
+			Weed copyweed = new Weed();
+			copyweed.setAge(originalcopy.getAge());
+			return copyweed;
+		}
+		return originalcopy;
+	}
+	
+	
 	@Override
 	public String toString()
 	{	
