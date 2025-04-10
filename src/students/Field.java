@@ -52,6 +52,10 @@ public class Field {
 	}
 	}
 	
+	public void till(int row, int column)
+	{
+		field[row][column] = new Soil();
+	}
 	@Override
 	public String toString()
 	{	
