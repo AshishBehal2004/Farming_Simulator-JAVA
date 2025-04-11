@@ -9,7 +9,6 @@ public abstract class Item {
 	//Constructor
 	public Item(int maturation_age, int death_age, int monetary_value) 
 	{
-		this.age = 0;
 		this.maturation_age = maturation_age;
 		this.death_age = death_age;
 		this.monetary_value = monetary_value;

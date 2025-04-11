@@ -28,6 +28,7 @@ public class Marker {
 //		Food testFood = a; //this should be possible
 //		Item testItem = testFood; //this should be possible
 //		
+		
 		Field testfield = new Field(6,10);
 		Apples testapple = new Apples();
 		Soil testsoil = new Soil();
@@ -37,6 +38,8 @@ public class Marker {
 		testfield.tick();
 		testfield.tick();
 		testfield.tick();
+		
+		
 //		System.out.println(testsoil.toString());
 		System.out.println("The monetary value is "+testfield.getValue());
 		System.out.println(testapple.getValue());

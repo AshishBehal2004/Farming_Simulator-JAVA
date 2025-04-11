@@ -1,6 +1,8 @@
 package students;
 
 import java.util.Random;
+
+import students.items.Grain;
 import students.items.Item;
 import students.items.Soil;
 import students.items.Weed;
@@ -84,6 +86,20 @@ public class Field {
 		return originalcopy;
 	}
 	
+	public int getValue()
+	{
+		int count = 0;
+		
+		for(int i=0;i< height;i++)
+		{
+			for (int j=0 ;j<width;j++)
+			{
+				Item item = field[i][j];
+				count += item.getValue();
+			}
+		}
+		return count;
+	}
 	
 	@Override
 	public String toString()
