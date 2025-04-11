@@ -149,7 +149,7 @@ public class Field {
 				summary += String.format("Soil:%10d\n",countSoil);
 				summary += String.format("Untilled:%5d\n",countUntilledSoil);
 				summary += String.format("Weed:%10d\n",countWeed);
-				summary += String.format("For a total of:%10d\n",totalValue);
+				summary += String.format("For a total of:$%10d\n",totalValue);
 				summary += String.format("Total apples created:%4d\n",Apples.getGenerationCount());
 				summary += String.format("Total grain created:%5d\n",Grain.getGenerationCount());
 				
