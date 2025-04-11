@@ -144,7 +144,15 @@ public class Field {
 			
 		}
 //		"%d/n%d/n%d/n%d/n%d/n"
-		String summary = "Apples: "+countApples+"\n"+"Grain: "+countGrain+"\n"+"Soil: "+countSoil+"\n"+"UntilledSoil: "+countUntilledSoil+"\n"+"Weed: "+countWeed+"\n"+"For a total of: "+totalValue+"\n"+Grain.getGenerationCount();
+		String summary = String.format("Apples:%7d\n",countApples);
+				summary += String.format("Grain:%8d\n",countGrain);
+				summary += String.format("Soil:%10d\n",countSoil);
+				summary += String.format("Untilled:%5d\n",countUntilledSoil);
+				summary += String.format("Weed:%10d\n",countWeed);
+				summary += String.format("For a total of:%10d\n",totalValue);
+				summary += String.format("Total apples created:%4d\n",Apples.getGenerationCount());
+				summary += String.format("Total grain created:%5d\n",Grain.getGenerationCount());
+				
 		return summary;
 	}
 	
