@@ -2,6 +2,7 @@ package students;
 
 import java.util.Random;
 
+import students.items.Apples;
 import students.items.Grain;
 import students.items.Item;
 import students.items.Soil;
@@ -99,6 +100,52 @@ public class Field {
 			}
 		}
 		return count;
+	}
+	
+	public String getSummary()
+	{
+		int countApples = 0; 
+		int totalValue = 0;
+		
+		int countGrain = 0; 
+		int countSoil = 0; 
+		int countUntilledSoil = 0; 
+		int countWeed = 0;
+		
+		for (int i=0;i<height;i++)
+		{
+			for (int j=0;j<width;j++)
+			{
+				Item item = field[i][j];
+				if (item instanceof Apples)
+				{
+					countApples ++;
+					
+				}
+				else if (item instanceof Grain)
+				{
+					countGrain++;
+					
+				}
+				else if (item instanceof Soil)
+				{
+					countSoil++;
+				}
+				else if (item instanceof UntilledSoil)
+				{
+					countUntilledSoil++;
+				}
+				else if (item instanceof Weed)
+				{
+					countWeed++;
+				}
+				totalValue += item.getValue();
+			}
+			
+		}
+//		"%d/n%d/n%d/n%d/n%d/n"
+		String summary = "Apples: "+countApples+"\n"+"Grain: "+countGrain+"\n"+"Soil: "+countSoil+"\n"+"UntilledSoil: "+countUntilledSoil+"\n"+"Weed: "+countWeed+"\n"+"For a total of: "+totalValue+"\n"+Grain.getGenerationCount();
+		return summary;
 	}
 	
 	@Override

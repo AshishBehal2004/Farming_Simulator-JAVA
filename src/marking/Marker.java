@@ -28,22 +28,14 @@ public class Marker {
 //		Food testFood = a; //this should be possible
 //		Item testItem = testFood; //this should be possible
 //		
-		
-		Field testfield = new Field(6,10);
-		Apples testapple = new Apples();
-		Soil testsoil = new Soil();
-		Grain testgrain = new Grain();
-//		testfield.plant(1, 0, testgrain);
-		testfield.plant(1, 1, testapple);
+		Field testfield = new Field(6,9);
+		Apples apple = new Apples();
+		Grain grain = new Grain();
+		testfield.plant(1, 0, apple);
 		testfield.tick();
 		testfield.tick();
 		testfield.tick();
-		
-		
-//		System.out.println(testsoil.toString());
-		System.out.println("The monetary value is "+testfield.getValue());
-		System.out.println(testapple.getValue());
-		System.out.println(testfield.toString());
+		System.out.println(testfield.getSummary());
 //		System.out.println(new Weed()); // should print "#"
 //		System.out.println(new UntilledSoil()); // should print "/"
 		
