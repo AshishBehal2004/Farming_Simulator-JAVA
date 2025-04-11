@@ -27,34 +27,19 @@ public class Marker {
 //		System.out.println(a.died()); // should print true
 //		Food testFood = a; //this should be possible
 //		Item testItem = testFood; //this should be possible
-//		
-		Field testfield = new Field(6,9);
-		Apples apple = new Apples();
-		Grain grain = new Grain();
-		testfield.plant(1, 0, apple);
-		testfield.tick();
-		testfield.tick();
-		testfield.tick();
-		System.out.println(testfield.getSummary());
 //		System.out.println(new Weed()); // should print "#"
 //		System.out.println(new UntilledSoil()); // should print "/"
-		
-		//just to check if the counter is working or not
-		//will remove it
-//		Grain grain1 = new Grain();
-//		Grain grain2 = new Grain();
-		//System.out.println(grain1.getGenerationCount());
 		
 		// Section TWO
 		// uncomment this section once you get to it
 		
 		
-		/*
+	
 		Field testField = new Field(5, 5);
 		System.out.println(testField.get(3, 3)); //should print "."
 		System.out.println(testField); //should print the field
 		System.out.println(testField.getValue()); //should print 0
-		a = new Apples();
+		Apples a = new Apples();
 		a.setAge(5);
 		testField.plant(0, 0, a);
 		System.out.println(testField.getValue()); //should print 3
@@ -62,7 +47,7 @@ public class Marker {
 		testField.till(0, 0);
 		System.out.println(a.equals(testField.get(0, 0))); //should print false
 		System.out.println(testField.get(0, 0).equals(new Soil())); //should print true
-		*/
+		
 
 		// Section THREE
 		// uncomment this section once you get to it
