@@ -25,20 +25,20 @@ public class Farm {
 			System.out.println(field.toString());
 			System.out.println("Bank Balance: $"+balance+"\n");
 			System.out.println("Enter your next action: ");
-			System.out.println("  t x y: ");
-			System.out.println("  h x y: ");
-			System.out.println("  p x y: ");
-			System.out.println("  s: ");
-			System.out.println("  w: ");
-			System.out.println("  q: ");
+			System.out.println("  t x y: till");
+			System.out.println("  h x y: harvest");
+			System.out.println("  p x y: plant");
+			System.out.println("  s: field summary");
+			System.out.println("  w: wait");
+			System.out.println("  q: quit");
 			action = user.nextLine();
 			
-			if (action.equals("quit"))
+			if (action.equals("q"))
 			{
 				quit();
 			}
 
-			else if (action.equals("field summary"))
+			else if (action.equals("s"))
 			{
 				summary(); 
 			}
