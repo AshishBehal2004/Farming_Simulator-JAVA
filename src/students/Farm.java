@@ -17,9 +17,9 @@ public class Farm {
 		this.field = new Field(fieldWidth,fieldHeight);
 	}
 	
+	boolean run = true;
 	public void run()
 	{
-		boolean run = true;
 		while (run)
 		{
 			System.out.println(field.toString());
@@ -33,18 +33,17 @@ public class Farm {
 			System.out.println("  q: ");
 			action = user.nextLine();
 			
-			if (action == "quit")
+			if (action.equals("quit"))
 			{
 				quit();
 			}
-//			break;
-			else if (action == "field summary")
+
+			else if (action.equals("field summary"))
 			{
-				summary();
+				summary(); 
 			}
 		}
-		System.out.println("thank you for playing. ");
-		
+		System.out.println("thank you for playing. ");	
 	}
 	public String summary()
 	{
@@ -53,7 +52,8 @@ public class Farm {
 	}
 	
 	public boolean quit()
-	{
-		return true;
+	{	
+		run = false;
+		return run;
 	}
 }
