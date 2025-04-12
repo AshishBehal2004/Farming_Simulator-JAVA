@@ -1,5 +1,7 @@
 package students;
 import students.Field;
+import students.items.Item;
+
 import java.util.Scanner;
 public class Farm {
 	
@@ -43,23 +45,39 @@ public class Farm {
 				summary(); 
 			}
 			
-			else if (action.equals("plant"))
+			String [] parts = action.split(" ");		
+			if (parts.length == 3 && parts[0].equals("p"))
 			{
-				plant();
+				int a = Integer.parseInt(parts[1]);
+				int b = Integer.parseInt(parts[2]);
+				
+				Item item = field.get(a, b);
+				if (item instanceof Soil)
+				{
+					System.out.println("Enter: \n"
+							+ " - 'a' to buy an apple for $\n"
+							+ " - 'g' to buy grain for ");
+					action = user.nextLine();
+					if(user.equals(a))
+					{
+						
+					}
+				}
+				
+				
+				
 			}
 			
 //			else if (action.equals("w"))
 //			{
-//				wait();
+////				wait();
 //			}
 		}
+		
 		System.out.println("thank you for playing. ");	
 	}
 	
-	public void plant()
-	{
-		
-	}
+	
 	
 	public String summary()
 	{
