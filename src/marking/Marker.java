@@ -35,21 +35,23 @@ public class Marker {
 		
 		
 	
-		Field testField = new Field(5, 5);
-		System.out.println(testField.get(3, 3)); //should print "."
-		System.out.println(testField); //should print the field
-		System.out.println(testField.getValue()); //should print 0
-		Apples a = new Apples();
-		a.setAge(5);
-		testField.plant(0, 0, a);
-		System.out.println(testField.getValue()); //should print 3
-		System.out.println(a.equals(testField.get(0, 0))); //should print true
-		testField.till(0, 0);
-		System.out.println(a.equals(testField.get(0, 0))); //should print false
-		System.out.println(testField.get(0, 0).equals(new Soil())); //should print true
-		System.out.println(testField.getSummary());
+//		Field testField = new Field(5, 5);
+//		System.out.println(testField.get(3, 3)); //should print "."
+//		System.out.println(testField); //should print the field
+//		System.out.println(testField.getValue()); //should print 0
+//		Apples a = new Apples();
+//		a.setAge(5);
+//		testField.plant(0, 0, a);
+//		System.out.println(testField.getValue()); //should print 3
+//		System.out.println(a.equals(testField.get(0, 0))); //should print true
+//		testField.till(0, 0);
+//		System.out.println(a.equals(testField.get(0, 0))); //should print false
+//		System.out.println(testField.get(0, 0).equals(new Soil())); //should print true
+//		System.out.println(testField.getSummary());
 		
-
+//		Field testfield = new Field(6,9);	
+		Farm testfarm = new Farm(6,9,10);
+		testfarm.run();
 		// Section THREE
 		// uncomment this section once you get to it
 		//remember, your farm should work on varies size fields (assuming all fields are less than 10x10)
