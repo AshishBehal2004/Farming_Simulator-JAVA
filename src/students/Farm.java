@@ -8,7 +8,7 @@ public class Farm {
 	private int balance;
 	private Field field;
 	Scanner user = new Scanner(System.in);
-
+	String action;
 	public Farm(int fieldWidth, int fieldHeight, int startingFunds)
 	{
 		this.fieldWidth = fieldWidth;
@@ -31,11 +31,29 @@ public class Farm {
 			System.out.println("  s: ");
 			System.out.println("  w: ");
 			System.out.println("  q: ");
-			String sc = user.nextLine();
+			action = user.nextLine();
 			
+			if (action == "quit")
+			{
+				quit();
+			}
+//			break;
+			else if (action == "field summary")
+			{
+				summary();
+			}
 		}
+		System.out.println("thank you for playing. ");
 		
+	}
+	public String summary()
+	{
+		return field.getSummary();
 		
 	}
 	
+	public boolean quit()
+	{
+		return true;
+	}
 }
