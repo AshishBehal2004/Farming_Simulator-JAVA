@@ -42,14 +42,35 @@ public class Farm {
 			{
 				summary(); 
 			}
+			
+			else if (action.equals("plant"))
+			{
+				plant();
+			}
+			
+//			else if (action.equals("w"))
+//			{
+//				wait();
+//			}
 		}
 		System.out.println("thank you for playing. ");	
 	}
+	
+	public void plant()
+	{
+		
+	}
+	
 	public String summary()
 	{
 		return field.getSummary();
 		
 	}
+	
+//	public void wait()
+//	{
+//		field.tick();
+//	}
 	
 	public boolean quit()
 	{	
