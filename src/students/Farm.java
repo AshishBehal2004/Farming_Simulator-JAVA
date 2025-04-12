@@ -7,6 +7,7 @@ public class Farm {
 	private int fieldHeight;
 	private int balance;
 	private Field field;
+	Scanner user = new Scanner(System.in);
 
 	public Farm(int fieldWidth, int fieldHeight, int startingFunds)
 	{
@@ -18,21 +19,19 @@ public class Farm {
 	
 	public void run()
 	{
-		boolean quit = true;
-		while (quit != false)
+		boolean run = true;
+		while (run)
 		{
-			Scanner user = new Scanner(System.in);
 			System.out.println(field.toString());
 			System.out.println("Bank Balance: $"+balance+"\n");
 			System.out.println("Enter your next action: ");
-			System.out.print("  t x y: ");
-			String sc = user.nextLine();
-			System.out.print("  h x y: ");
-			String sc1 = user.nextLine();
+			System.out.println("  t x y: ");
+			System.out.println("  h x y: ");
 			System.out.println("  p x y: ");
-			System.out.println("  s x y: ");
+			System.out.println("  s: ");
 			System.out.println("  w: ");
 			System.out.println("  q: ");
+			String sc = user.nextLine();
 			
 		}
 		
