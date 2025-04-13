@@ -99,6 +99,12 @@ public class Farm {
 					System.out.println("Sorry Items can only be Planted in Soil");
 				}
 			}
+			else if (parts.length == 3 && parts[0].equals("t"))
+			{
+				int a = Integer.parseInt(parts[1]);
+				int b = Integer.parseInt(parts[2]);
+				field.till(a, b);
+			}
 			
 			
 //			else if (action.equals("w"))
@@ -112,9 +118,9 @@ public class Farm {
 	
 	
 	
-	public String summary()
+	public void summary()
 	{
-		return field.getSummary();
+		System.out.println(field.getSummary());
 		
 	}
 	
