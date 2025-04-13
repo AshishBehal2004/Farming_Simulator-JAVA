@@ -20,6 +20,7 @@ public class Farm {
 		this.fieldHeight = fieldHeight;
 		this.balance = startingFunds;
 		this.field = new Field(fieldWidth,fieldHeight);
+		
 	}
 	
 	boolean run = true;
@@ -58,39 +59,47 @@ public class Farm {
 				if (item instanceof Soil)
 				{
 					System.out.println("Enter: \n"
-							+ " - 'a' to buy an apple for $2: \n"
-							+ " - 'g' to buy grain for $1: ");
+							+ " - 'a' to buy an apple for $2\n"
+							+ " - 'g' to buy grain for $1 ");
 					
 					String choice = user.nextLine();
 					if(choice.equals("a"))
 					{
 						if (balance >= 2)
 						{
-							balance -=2;
 							field.plant(a, b, new Apples());
+							balance -=2;
 						}
-						else if (balance <= 2)
+						else
 						{
-							System.out.println("Less Funds to plant Apple");
+							System.out.println("Need to $2 to plant Apple");
 						}
 					}
-					else if (choice.equals("g"))
+					else 
+						if (choice.equals("g"))
 					{
 						if (balance >= 1)
 						{
+							field.plant(a, b, new Grain());
 							balance -= 1;
-							field.plant(a, b, item);
 						}
-						else if (balance <= 1)
+						else 
 						{
-							System.out.println("Less Funds to plant Grain");							
+							System.out.println("Need to $1 to plant Grain");							
 						}
 					}
+						else
+							if (choice != "a" || choice != "g")
+							{
+								System.out.println("Invalid choice, Enter 'a' or 'g'");
+							}
 				}
-				
-				
-				
+				else
+				{
+					System.out.println("Sorry Items can only be Planted in Soil");
+				}
 			}
+			
 			
 //			else if (action.equals("w"))
 //			{

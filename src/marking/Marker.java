@@ -49,15 +49,12 @@ public class Marker {
 //		System.out.println(testField.get(0, 0).equals(new Soil())); //should print true
 //		System.out.println(testField.getSummary());
 		
-//		Field testfield = new Field(6,9);	
-		Farm testfarm = new Farm(6,9,10);
-		testfarm.run();
 		
 		// Section THREE
 		// uncomment this section once you get to it
 		//remember, your farm should work on varies size fields (assuming all fields are less than 10x10)
-		//Farm f = new Farm(10, 5, 10);
-		//f.run();
+		Farm f = new Farm(10, 5, 10);
+		f.run();
 		
 	}
 
