@@ -112,6 +112,7 @@ public class Farm {
 				field.tick();
 			}
 		}
+		field.tick();
 		
 		System.out.println("thank you for playing. ");	
 	}
