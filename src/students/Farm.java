@@ -107,10 +107,10 @@ public class Farm {
 			}
 			
 			
-//			else if (action.equals("w"))
-//			{
-////				wait();
-//			}
+			else if (action.equals("w"))
+			{
+				field.tick();
+			}
 		}
 		
 		System.out.println("thank you for playing. ");	
@@ -124,10 +124,7 @@ public class Farm {
 		
 	}
 	
-//	public void wait()
-//	{
-//		field.tick();
-//	}
+
 	
 	public boolean quit()
 	{	
