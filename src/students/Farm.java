@@ -1,6 +1,9 @@
 package students;
 import students.Field;
+import students.items.Apples;
+import students.items.Grain;
 import students.items.Item;
+import students.items.Soil;
 
 import java.util.Scanner;
 public class Farm {
@@ -55,12 +58,33 @@ public class Farm {
 				if (item instanceof Soil)
 				{
 					System.out.println("Enter: \n"
-							+ " - 'a' to buy an apple for $\n"
-							+ " - 'g' to buy grain for ");
-					action = user.nextLine();
-					if(user.equals(a))
+							+ " - 'a' to buy an apple for $2: \n"
+							+ " - 'g' to buy grain for $1: ");
+					
+					String choice = user.nextLine();
+					if(choice.equals("a"))
 					{
-						
+						if (balance >= 2)
+						{
+							balance -=2;
+							field.plant(a, b, new Apples());
+						}
+						else if (balance <= 2)
+						{
+							System.out.println("Less Funds to plant Apple");
+						}
+					}
+					else if (choice.equals("g"))
+					{
+						if (balance >= 1)
+						{
+							balance -= 1;
+							field.plant(a, b, item);
+						}
+						else if (balance <= 1)
+						{
+							System.out.println("Less Funds to plant Grain");							
+						}
 					}
 				}
 				

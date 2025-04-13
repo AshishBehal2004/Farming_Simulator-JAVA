@@ -12,7 +12,6 @@ public abstract class Item {
 		this.maturation_age = maturation_age;
 		this.death_age = death_age;
 		this.monetary_value = monetary_value;
-		
 	}
 	
 	//Setter for Age
