@@ -1,7 +1,7 @@
 package students.items;
 
-//UntilledSoil here is the child class that inherits everything from its pare
-//class(Item). This class is later on used in Field.
+//UntilledSoil here is the child class that inherits everything from its parent
+//class(Item). This class is later on used in Field class.
 public class UntilledSoil extends Item{
 	//UntilledSoil constructor that has super constructor which calls Item class
 	//constructor in order to add necessary value in the arguments.
