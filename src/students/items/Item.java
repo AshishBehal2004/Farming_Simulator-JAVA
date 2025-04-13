@@ -35,6 +35,11 @@ public abstract class Item {
 		return this.age;
 	}
 	
+	public int getMaturationAge()
+	{
+		return this.maturation_age;
+	}
+	
 	public int getValue()
 	{
 		if (this.age >= this.maturation_age)

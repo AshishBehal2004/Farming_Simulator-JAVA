@@ -4,6 +4,7 @@ import students.items.Apples;
 import students.items.Grain;
 import students.items.Item;
 import students.items.Soil;
+import students.items.Food;
 
 import java.util.Scanner;
 public class Farm {
@@ -104,6 +105,19 @@ public class Farm {
 				int a = Integer.parseInt(parts[1]);
 				int b = Integer.parseInt(parts[2]);
 				field.till(a, b);
+			}
+			
+			else if (parts.length == 3 && parts[0].equals("h") )
+			{
+				int a = Integer.parseInt(parts[1]);
+				int b = Integer.parseInt(parts[2]);
+				Item item = field.get(a, b);
+				if (item instanceof Food && item.getMaturationAge() <= item.getAge())
+				{
+					balance += item.getValue();
+					field.till(a, b);
+				}
+				
 			}
 			
 			
